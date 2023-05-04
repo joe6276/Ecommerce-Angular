@@ -1,1 +1,15 @@
-<p>display-products works!</p>
+
+
+<div class="flex justify-center  md:flex flex-row p-4 mb-4mt-6 flex-wrap md:justify-center " *ngIf="products()">
+    <div class="flex flex-col space-y-2 p-2 w-[350px] h-[430px] border-solid border-1 border-sky-500" *ngFor="let product of products()">
+            <img src={{product.productImg}} class="w-100 h-100 " alt="">
+        <h1>{{product.productName}}</h1>
+            <p>{{product.productDescription}} </p>
+                <p>{{product.productPrice | currency}}</p>
+            <div class="flex  space-y-2 md:flex-row md:space-y-0 space-x-4">
+                <button class="bg-BgColor px-4 rounded text-white  py-2"> Edit</button>
+                <button class="bg-BgColor px-4 rounded text-white  py-2"> Delete</button>
+                <button class="bg-BgColor px-4 rounded text-white  py-2" (click)="addToCart(product.id)"> Add to Cart </button>
+            </div>
+    </div>
+</div> 

@@ -1,0 +1,59 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "Mouse",
+      "productImg": "https://i.shgcdn.com/01b7205f-6b32-482b-bc5a-2126a53d9b65/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+      "productPrice": "200",
+      "productDescription": "A quality Mouse"
+    },
+    {
+      "id": 11,
+      "productName": "Keyboards",
+      "productImg": "https://i.shgcdn.com/e20910ab-f171-4135-a9c7-112fe1f52290/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+      "productPrice": "200",
+      "productDescription": "A quality  Keyboard "
+    },
+    {
+      "productName": "Mic",
+      "productImg": "https://i.shgcdn.com/80278c23-1489-4766-a1e8-ff5ee572e01a/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+      "productPrice": "2345",
+      "productDescription": "Streaming Mic",
+      "id": 2
+    },
+    {
+      "productName": "efre",
+      "productImg": "https://i.shgcdn.com/608caeaf-adae-489f-9ef0-7be72336e91c/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+      "productPrice": "345",
+      "productDescription": "werwe",
+      "id": 3
+    },
+    {
+      "productName": "Mouse Pad",
+      "productImg": "https://i.shgcdn.com/b5d3402f-aa5f-426a-96b5-b79f1b4cabae/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+      "productPrice": "4560",
+      "productDescription": "A quality Mouse Pad",
+      "id": 4
+    }
+  ],
+  "cart": [
+    {
+      "productName": "Keyboards",
+      "productImg": "https://i.shgcdn.com/e20910ab-f171-4135-a9c7-112fe1f52290/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+      "productPrice": "200",
+      "productDescription": "A quality  Keyboard ",
+      "productId": 11,
+      "quantity": 29,
+      "id": 1
+    },
+    {
+      "productName": "efre",
+      "productImg": "https://i.shgcdn.com/608caeaf-adae-489f-9ef0-7be72336e91c/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
+      "productPrice": "345",
+      "productDescription": "werwe",
+      "productId": 3,
+      "quantity": 10,
+      "id": 2
+    }
+  ]
+}

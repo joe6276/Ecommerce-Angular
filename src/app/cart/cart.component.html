@@ -1,1 +1,43 @@
-<p>cart works!</p>
+
+    <div class="flex flex-col w-full h-full justify-center md:flex-row" *ngIf="cart()">
+        <div class="flex flex-col  md:items-center md:w-3/6">
+               <h1> Cart({{cart().length}})</h1>
+            <div class="flex p-2 flex-col items-center" *ngFor="let cart of cart()">
+                <hr>
+                <div class="flex flex-col items-center  md:flex-row md:space-x-2">
+                    <div class="md:w-1/6">
+                        <img src={{cart.productImg}} class="h-full w-full" alt="">
+                    </div>
+        
+                    <div class="md:w-4/6">
+                       {{cart.productName}}
+                    </div>
+        
+                    <div class=" flex flex-col md:w-1/6">
+                        <p>{{cart.productPrice | currency}}</p>
+                        <p class="line-through">{{cart.productPrice | currency}}</p>
+                        <p>0%</p>
+                    
+                    </div>
+                </div>
+                <div class="flex w-full flex-col px-4 md:flex-row md:justify-between">
+                    <div class="flex flex-row space-x-2 items-center px-10 py-2 w-1/8">
+                        <img src="../../assets//delete.png" class="h-6 w-6" alt="">
+                        <p>Remove</p>
+                    </div>
+        
+                    <div class="flex flex-row space-x-2 px-10 py-2 items-center w-1/8">
+                        <img src="../../assets//minus.png" class="h-8 w-8" alt="">
+                        <p>1</p>
+                        <img src="../../assets//add.png" class="h-8 w-8" alt="">
+                    </div>
+                </div>
+            </div>           
+        </div>
+        <div class="flex flex-col space-y-4 bg-VeryPaleRed p-4 mt-10 md:w-1/5 md:h-60">
+            <h1>CART SUMMARY</h1>
+            <p>SubTotal : KSH 2000</p>
+            <p>Delivery FEE=300</p>
+            <button class="bg-BgColor w-3/4 text-white py-2 px-4 rounded ">CHECKOUT 2000</button>
+        </div>
+        </div>

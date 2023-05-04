@@ -1,8 +1,11 @@
 
 <div class="flex flex-col items-center justify-around text-white bg-BgColor py-4 md:flex-row">
 <a href="#"> HOME<span class="text-Red font-bold">LOGO</span></a>
-<a href="#">Products</a>
-<a href="#">Add Products</a>
-<img src="../../assets/crt.png" alt="">
+<a routerLink="/product">Products</a>
+<a routerLink="/add" >Add Products</a>
+<div class="flex space-x-2 items-center">
+    <img src="../../assets/crt.png" alt="" routerLink="/cart">
+    <p class="bg-white rounded-full  text-black px-2" >2</p>
+</div>
 
 </div>

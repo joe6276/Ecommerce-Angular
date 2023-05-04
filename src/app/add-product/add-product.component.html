@@ -4,23 +4,38 @@
         <img  class="h-full w-full" src="https://images.ctfassets.net/l893v89mix1e/5cMemuw2X5hZNAJzoMps3z/68cd52d2a6f33f963343689547ad45c1/Product_photography_16x9_hero-min.jpg?w=2560&h=1440&fl=progressive&q=90&fm=jpg" alt="">
     </div>
     <div class="flex flex-col p-4 space-y-4 md:w-1/2">
+       <form [formGroup]="form" (ngSubmit)="addProduct()">
         <div class="flex flex-col space-y-2">
             <label for="name">Name of the product </label>
-            <input type="text" class="py-2 border-2 rounded  border-black w-5/6">
+            <input type="text" class="py-2 border-2 rounded  border-black w-5/6"    formControlName="productName"/>
+            <span  class="text-Red" *ngIf="!form.get('productName')?.valid && form.get('productName')?.touched">
+                <span *ngIf="form.get('productName')!.errors!['required']"> Please enter a Valid product Name </span>
+             </span>
         </div>
         <div class="flex flex-col space-y-2">
             <label for="name">Description of the Product </label>
-            <textarea type="text" class="py-2 border-2 rounded  border-black w-5/6"></textarea>
+            <textarea type="text" class="py-2 border-2 rounded  border-black w-5/6" formControlName="productDescription" ></textarea>
+            <span  class="text-Red" *ngIf="!form.get('productDescription')?.valid && form.get('productDescription')?.touched">
+                <span *ngIf="form.get('productDescription')!.errors!['required']"> Please enter a Valid product Name </span>
+             </span>
         </div>
         <div class="flex flex-col space-y-2">
             <label for="name">Price </label>
-            <input type="text" class="py-2 border-2 rounded  border-black w-5/6">
+            <input type="text" formControlName="productPrice" class="py-2 border-2 rounded  border-black w-5/6">
+            <span  class="text-Red" *ngIf="!form.get('productPrice')?.valid && form.get('productPrice')?.touched">
+                <span *ngIf="form.get('productPrice')!.errors!['required']"> Please enter a Valid product Price </span>
+             </span>
         </div>
         <div class="flex flex-col space-y-2">
-            <label for="name">Discount </label>
-            <input type="text" class="py-2 border-2 rounded  border-black w-5/6">
+            <label for="name">Image </label>
+            <input type="text" formControlName="productImg" class="py-2 border-2 rounded  border-black w-5/6">
+            <span  class="text-Red" *ngIf="!form.get('productImg')?.valid && form.get('productImg')?.touched">
+                <span *ngIf="form.get('productImg')!.errors!['required']"> Please enter a Valid product Image </span>
+             </span>
         </div>
 
-        <button class="bg-BgColor text-white px-2 w-1/2 py-4 rounded md:w-1/4">Add Product</button>
+        <button  [disabled]="!form.valid" type="submit" class="bg-BgColor text-white px-2 w-1/2 py-4 mt-4 rounded md:w-1/4">Add Product</button>
+
+       </form>
     </div>
 </div>
